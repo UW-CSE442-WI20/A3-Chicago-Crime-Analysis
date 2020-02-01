@@ -21,8 +21,8 @@ var svg = d3.select("body").append("svg")
         "translate(" + margin.left + "," + margin.top + ")");
 
 // get the data
-d3.csv("crime_number.csv", function(error, data) {
-    if (error) throw error;
+d3.csv("crime_number.csv").then(function(data) {
+
 
     // format the data
     data.forEach(function(d) {

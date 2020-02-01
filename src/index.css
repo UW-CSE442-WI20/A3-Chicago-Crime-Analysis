@@ -1,1 +1,2 @@
-.bar { fill: steelblue; }
+.bar { fill: cornflowerblue }
+.bar:hover {opacity: 0.6; transition: 0.3s ease-in-out}
