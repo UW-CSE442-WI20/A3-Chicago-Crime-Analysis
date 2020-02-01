@@ -21,7 +21,7 @@ var svg = d3.select("body").append("svg")
         "translate(" + margin.left + "," + margin.top + ")");
 
 // get the data
-d3.csv("./crime_number.csv", function(error, data) {
+d3.csv("https://drive.google.com/drive/folders/1djA8obngc9CQAwOlI0EY9Z8GTjCCpc1L.csv", function(error, data) {
     if (error) throw error;
 
     // format the data

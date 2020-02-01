@@ -1,8 +1,6 @@
 
 >
 src/index.html,5/c/5c975582791da6f060261188096d6aad85db6e09
-=
-src/sales.csv,3/7/37a99bd5310fae81d0708070e6444dacb5f30f3b
 D
 src/crime_number.csv,c/d/cd5b78bc2a7a177a0b8a7e034c04cc9483a2495f
 =
