@@ -8,3 +8,11 @@
     border-radius: 4px;
     font-size: 15px;
 }
+body {
+    background-color: lightgray;
+}
+svg {
+    background-color: white;
+    height: 530px;
+
+}

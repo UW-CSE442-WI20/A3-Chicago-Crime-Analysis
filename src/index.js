@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-var margin = {top: 100, right: 50, bottom: 30, left: 80},
+var margin = {top: 50, right: 50, bottom: 30, left: 80},
     width = 800 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -59,5 +59,9 @@ d3.csv("crime_number.csv").then(function(data) {
     // add the y Axis
     svg.append("g")
         .call(d3.axisLeft(y));
+    svg.append("text")
+        .attr("x", 300)
+        .attr("y", 460)
+        .text("Year");
 
 });
