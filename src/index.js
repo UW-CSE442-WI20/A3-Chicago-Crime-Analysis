@@ -20,6 +20,13 @@ var svg = d3.select("body").append("svg")
     .attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
 
+var tip = d3.tip().attr('class', 'd3-tip').direction('n').offset([-5, 0])
+    .html(function(d) {
+        var content = "<span style='margin-left: 2.5px;'><b>" + d.number + "</b></span><br>";
+        return content;
+    });
+svg.call(tip);
+
 // get the data
 d3.csv("crime_number.csv").then(function(data) {
 
@@ -41,13 +48,14 @@ d3.csv("crime_number.csv").then(function(data) {
         .attr("x", function(d) { return x(d.year); })
         .attr("width", x.bandwidth())
         .attr("y", function(d) { return y(d.number); })
-        .attr("height", function(d) { return height - y(d.number); });
+        .attr("height", function(d) { return height - y(d.number); })
+        .on("mouseover", tip.show)
+        .on("mouseout", tip.hide);
 
     // add the x Axis
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x));
-
     // add the y Axis
     svg.append("g")
         .call(d3.axisLeft(y));
