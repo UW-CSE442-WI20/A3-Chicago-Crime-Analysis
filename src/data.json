@@ -1,0 +1,72 @@
+{
+  "2010": [
+    { "time": "North", "count": "53245"},
+    { "time": "South", "count": "28479"},
+    { "time": "East", "count": "19697"},
+    { "time": "West", "count": "24037"},
+    { "time": "Central", "count": "40245"}
+  ],
+  "2011": [
+    { "time": "North", "count": "200"},
+    { "time": "South", "count": "200"},
+    { "time": "East", "count": "200"},
+    { "time": "West", "count": "200"},
+    { "time": "Central", "count": "200"}
+  ],
+  "2012": [
+    { "time": "North", "count": "53245"},
+    { "time": "South", "count": "28479"},
+    { "time": "East", "count": "19697"},
+    { "time": "West", "count": "24037"},
+    { "time": "Central", "count": "40245"}
+  ],
+  "2013": [
+    { "time": "North", "count": "53245"},
+    { "time": "South", "count": "28479"},
+    { "region": "East", "count": "19697"},
+    { "region": "West", "count": "24037"},
+    { "region": "Central", "count": "40245"}
+  ],
+  "2014": [
+    { "region": "North", "count": "53245"},
+    { "region": "South", "count": "28479"},
+    { "region": "East", "count": "19697"},
+    { "region": "West", "count": "24037"},
+    { "region": "Central", "count": "40245"}
+  ],
+  "2015": [
+    { "region": "North", "count": "53245"},
+    { "region": "South", "count": "28479"},
+    { "region": "East", "count": "19697"},
+    { "region": "West", "count": "24037"},
+    { "region": "Central", "count": "40245"}
+  ],
+  "2016": [
+    { "region": "North", "count": "53245"},
+    { "region": "South", "count": "28479"},
+    { "region": "East", "count": "19697"},
+    { "region": "West", "count": "24037"},
+    { "region": "Central", "count": "40245"}
+  ],
+  "2017": [
+    { "region": "North", "count": "53245"},
+    { "region": "South", "count": "28479"},
+    { "region": "East", "count": "19697"},
+    { "region": "West", "count": "24037"},
+    { "region": "Central", "count": "40245"}
+  ],
+  "2018": [
+    { "region": "North", "count": "53245"},
+    { "region": "South", "count": "28479"},
+    { "region": "East", "count": "19697"},
+    { "region": "West", "count": "24037"},
+    { "region": "Central", "count": "40245"}
+  ],
+  "2019": [
+    { "region": "North", "count": "53245"},
+    { "region": "South", "count": "28479"},
+    { "region": "East", "count": "19697"},
+    { "region": "West", "count": "24037"},
+    { "region": "Central", "count": "40245"}
+  ]
+}
