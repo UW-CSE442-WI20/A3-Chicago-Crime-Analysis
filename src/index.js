@@ -28,7 +28,8 @@ var tip = d3.tip().attr('class', 'd3-tip').direction('n').offset([-5, 0])
 svg.call(tip);
 
 // get the data
-d3.csv("crime_number.csv").then(function(data) {
+const csvFile = require('./crime_number.csv');
+d3.csv(csvFile).then(function(data) {
 
 
     // format the data

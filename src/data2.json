@@ -265,11 +265,11 @@
     "2010": [
       {
         "kind": "arrested",
-        "count": "0.53"
+        "count": "1"
       },
       {
         "kind": "not_arrested",
-        "count": "0.46"
+        "count": "0"
       },
       {
         "kind": "arrested",
@@ -291,14 +291,10 @@
     "2011": [
       {
         "kind": "arrested",
-        "count": "0.57"
+        "count": "1"
       },
       {
         "kind": "not_arrested",
-        "count": "0.42"
-      },
-      {
-        "kind": "arrested",
         "count": "0"
       },
       {
@@ -311,215 +307,219 @@
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
+      },
+      {
+        "kind": "arrested",
+        "count": "1"
       }
     ],
     "2012": [
       {
         "kind": "arrested",
-        "count": "0.56"
+        "count": "1"
       },
       {
         "kind": "not_arrested",
-        "count": "0.43"
-      },
-      {
-        "kind": "arrested",
         "count": "0"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
+      },
+      {
+        "kind": "arrested",
+        "count": "1"
       }
     ],
     "2013": [
       {
         "kind": "arrested",
-        "count": "0.56"
+        "count": "1"
       },
       {
         "kind": "not_arrested",
-        "count": "0.43"
-      },
-      {
-        "kind": "arrested",
         "count": "0"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
+      },
+      {
+        "kind": "arrested",
+        "count": "1"
       }
     ],
     "2014": [
       {
         "kind": "arrested",
-        "count": "0.56"
+        "count": "1"
       },
       {
         "kind": "not_arrested",
-        "count": "0.43"
-      },
-      {
-        "kind": "arrested",
         "count": "0"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
+      },
+      {
+        "kind": "arrested",
+        "count": "1"
       }
     ],
     "2015": [
       {
         "kind": "arrested",
-        "count": "0.61"
+        "count": "1"
       },
       {
         "kind": "not_arrested",
-        "count": "0.38"
-      },
-      {
-        "kind": "arrested",
         "count": "0"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
+      },
+      {
+        "kind": "arrested",
+        "count": "1"
       }
     ],
     "2016": [
       {
         "kind": "arrested",
-        "count": "0.66"
+        "count": "1"
       },
       {
         "kind": "not_arrested",
-        "count": "0.33"
-      },
-      {
-        "kind": "arrested",
         "count": "0"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
+      },
+      {
+        "kind": "arrested",
+        "count": "1"
       }
     ],
     "2017": [
       {
         "kind": "arrested",
-        "count": "0.73"
+        "count": "1"
       },
       {
         "kind": "not_arrested",
-        "count": "0.26"
-      },
-      {
-        "kind": "arrested",
         "count": "0"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
+      },
+      {
+        "kind": "arrested",
+        "count": "1"
       }
     ],
     "2018": [
       {
         "kind": "arrested",
-        "count": "0.65"
+        "count": "1"
       },
       {
         "kind": "not_arrested",
-        "count": "0.34"
-      },
-      {
-        "kind": "arrested",
         "count": "0"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
+      },
+      {
+        "kind": "arrested",
+        "count": "1"
       }
     ],
     "2019": [
       {
         "kind": "arrested",
-        "count": "0.77"
+        "count": "1"
       },
       {
         "kind": "not_arrested",
-        "count": "0.22"
-      },
-      {
-        "kind": "arrested",
         "count": "0"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
       },
       {
         "kind": "arrested",
-        "count": "0"
+        "count": "1"
+      },
+      {
+        "kind": "arrested",
+        "count": "1"
       }
     ]
   }

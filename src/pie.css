@@ -10,3 +10,8 @@ form {
     right: 10px;
     top: 10px;
 }
+svg {
+    width: 1000px;
+    height: 1000px;
+}
+
