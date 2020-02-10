@@ -61,7 +61,7 @@ function update(val = this.value) {
 
     svg.attr("transform", `translate(${300}, ${height - 150})`);
 
-    d3.json('./data.json').then(function(data) {
+    d3.json('./data.json').then(data => {
         d3.selectAll("input")
             .on("change", update);
 
@@ -140,6 +140,8 @@ document.getElementById("button").onclick = function() {goBack()};
 function goBack() {
     var butt = document.getElementById("control");
     butt.style.display = "none";
+    var r = document.getElementById("r");
+    r.checked = true;
     svg.selectAll("*").remove();
     svg.attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
@@ -147,9 +149,9 @@ function goBack() {
     svg.call(tip);
 
     // get the data
-    // d3.csv('./crime_number.csv', type).then(data => {
-    var csvFile = require('./crime_number.csv');
-    d3.csv(csvFile).then(function(data) {
+    d3.csv('./crime_number.csv', type).then(data => {
+    // var csvFile = require('./crime_number.csv');
+    // d3.csv(csvFile).then(function(data) {
         // format the data
         data.forEach(function(d) {
             d.number = +d.number;
