@@ -1,37 +1,8 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-    <title>Chicago Crime Analysis</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
-</head>
-<h1 style="font-family: 'STFangsong'; text-align: center">Chicago Homicide Cases Analysis from 2010-2019</h1>
-
-<div>
-    <p id="note" style="position: absolute; margin-top: 550px; margin-left: 290px; font-size: 16px; display: none; color: dimgray">
-        *Percentage of each type may add up to be not equal to 100% due to rounding.</p>
-</div>
-
-<div>
-    <p style="position: absolute; margin-top: 100px; margin-left: 830px; max-width: 200px; background-color: navajowhite; padding: 10px; border-radius: 10px" id="explain1">
-        Hover over bars of years you are interetsed in to see how many homicide cases happened in that year. <br> <br>Click on bars of interested years to get more details about homicide cases in that year.</p>
-</div>
-
-<div>
-    <p style="position: absolute; margin-top: 100px; margin-left: 830px; max-width: 200px; background-color: navajowhite; padding: 10px; border-radius: 10px; display: none;" id="explain2">
-        Hover over sectors you are interested in to see the percentage.</p>
-</div>
-
-<body>
-	<div id="control" style="display: none">
-	    <form>
-	    	<div class="button_cont" align="center" id="button" type="button">Back to All Years</div>
-	        <label class="select"><input type="radio" name="dataset" value="time_percentage" id = "r" checked> Time Period Percentage</label>
-	        <label class="select"><input type="radio" name="dataset" value="arrested_percentage"> Arrested Percentage</label>
-	    </form>
-	</div>
-<!-- load the d3.js library -->
-
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="d3-tip.js"></script>
-<script src="index.js"></script>
+<!DOCTYPE html><head><meta charset="utf-8"><title>Chicago Crime Analysis</title><link rel="stylesheet" type="text/css" href="/src.5987565a.css"></head><h1 style="font-family:STFangsong;text-align:center">Chicago Homicide Cases Analysis from 2010-2019</h1><div> <p id="note" style="position:absolute;margin-top:550px;margin-left:290px;font-size:16px;display:none;color:#696969"> *Percentage of each type may add up to be not equal to 100% due to rounding.</p>
+</div><div> <p style="position:absolute;margin-top:100px;margin-left:830px;max-width:200px;background-color:#ffdead;padding:10px;border-radius:10px" id="explain1"> Hover over bars of years you are interetsed in to see how many homicide cases happened in that year. <br> <br>Click on bars of interested years to get more details about homicide cases in that year.</p>
+</div><div> <p style="position:absolute;margin-top:100px;margin-left:830px;max-width:200px;background-color:#ffdead;padding:10px;border-radius:10px;display:none;" id="explain2"> Hover over sectors you are interested in to see the percentage.</p>
+</div><body> <div id="control" style="display:none"> <form> <div class="button_cont" align="center" id="button" type="button">Back to All Years</div> <label class="select"><input type="radio" name="dataset" value="time_percentage" id="r" checked> Time Period Percentage</label> <label class="select"><input type="radio" name="dataset" value="arrested_percentage"> Arrested Percentage</label> </form> </div>
+ <script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="/d3-tip.1a8e62f6.js"></script>
+<script src="/src.42d036bb.js"></script>
 </body>
