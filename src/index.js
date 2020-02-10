@@ -168,8 +168,8 @@ function goBack() {
             .attr("class", "bar")
             .attr("x", function(d) { return x(d.year); })
             .attr("width", x.bandwidth())
-            .attr("y", function(d) { return y(d.number); })
-            .attr("height", function(d) { return height - y(d.number); })
+            .attr("height", function(d) { return height - y(0); }) // always equal to 0
+            .attr("y", function(d) { return y(0); })
             .on("mouseover", tip.show)
             .on("mouseout", tip.hide)
             .on("click", function(d) {
@@ -178,6 +178,12 @@ function goBack() {
                 update("time_percentage");  
                 d3.select(".d3-tip").remove(); 
             });
+
+        svg.selectAll("rect")
+       .transition()
+       .duration(800)
+       .attr("y", function(d) { return y(d.number); })
+       .attr("height", function(d) { return height - y(d.number); });
 
 
         // add the x Axis
