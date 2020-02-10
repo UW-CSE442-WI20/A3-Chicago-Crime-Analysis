@@ -95,7 +95,8 @@ function update(val = this.value) {
 
     var tip2 = d3.tip().attr('class', 'd3-tip2').offset([0,0])
         .html(function(d,i) {
-            var content = "<span style='margin-left: 2.5px;'><b>" + Math.round(data[val][year][i].count * 100) + "%" + "</b></span><br>";   
+        	console.log(d);
+            var content = "<span style='margin-left: 2.5px;'><b>" + Math.round(d.data.count * 100) + "%" + "</b></span><br>";   
             return content;
         });
 
