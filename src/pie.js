@@ -34,7 +34,7 @@ function arcTween(a) {
     return (t) => arc(i(t));
 }
 
-d3.json("data.json", type).then(data => {
+d3.json("./data.json", type).then(data => {
     d3.selectAll("input")
         .on("change", update);
 
@@ -56,10 +56,10 @@ d3.json("data.json", type).then(data => {
     svg.append("text").attr("x", 320).attr("y", 0).text("arrested").attr("opacity", 0).attr("class", "label2").style("font-size", "15px").attr("alignment-baseline", "middle");
     svg.append("text").attr("x", 320).attr("y", 30).text("not arrested").attr("opacity", 0).attr("class", "label2").style("font-size", "15px").attr("alignment-baseline", "middle");
 
-    function update(val = this.value) {
+    function update(val = this.value, year) {
         // Join new data
         const path = svg.selectAll("path")
-            .data(pie(data[val][2010]));
+            .data(pie(data[val][year]));
 
         // Update existing arcs
         path.transition().duration(200).attrTween("d", arcTween);
@@ -94,5 +94,5 @@ d3.json("data.json", type).then(data => {
     }
 
 
-    update("time_percentage");
+    update("time_percentage", year);
 });

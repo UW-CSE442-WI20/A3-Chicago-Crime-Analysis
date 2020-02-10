@@ -4,18 +4,21 @@
     <title>Chicago Crime Analysis</title>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
-<h1 style="font-family: 'STFangsong'; text-align: center">Chicago Crime Analysis from 2010-2019</h1>
+<h1 style="font-family: 'STFangsong'; text-align: center">Chicago Homicide Cases Analysis from 2010-2019</h1>
 <body>
-
+	<div id="control" style="display: none">
+	    <form>
+	    	<button id="button" type="button">Back to All Cases</button>
+	        <label><input type="radio" name="dataset" value="time_percentage" checked> Time Period Percentage</label>
+	        <label><input type="radio" name="dataset" value="arrested_percentage"> Arrested Percentage</label>
+	    </form>
+	</div>
 <!-- load the d3.js library -->
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="d3-tip.js"></script>
 <script src="index.js"></script>
 
-<div>
-    <p style="position: absolute; margin-top: -260px; transform: rotate(270deg)">Total Cases</p>
-</div>
 <div>
     <p style="position: absolute; margin-top: -400px; margin-left: 830px; max-width: 120px; background-color: navajowhite; padding: 8px; border-radius: 10px">
         Hover and click on your interested year to get more details!</p>
