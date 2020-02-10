@@ -61,79 +61,81 @@ function update(val = this.value) {
 
     svg.attr("transform", `translate(${300}, ${height - 150})`);
 
-    d3.json('./data.json').then(data => {
-        d3.selectAll("input")
-            .on("change", update);
 
-        svg.append("circle").attr("cx", 300).attr("cy", 0).attr("r", 6).attr("class", "label1").attr("opacity", 0).style("fill", "#66c2a5");
-        svg.append("circle").attr("cx", 300).attr("cy", 30).attr("r", 6).attr("class", "label1").attr("opacity", 0).style("fill", "#fc8d62");
-        svg.append("circle").attr("cx", 300).attr("cy", 60).attr("r", 6).attr("class", "label1").attr("opacity", 0).style("fill", "#8da0cb");
-        svg.append("circle").attr("cx", 300).attr("cy", 90).attr("r", 6).attr("class", "label1").attr("opacity", 0).style("fill", "#e78ac3");
-        svg.append("circle").attr("cx", 300).attr("cy", 120).attr("r", 6).attr("class", "label1").attr("opacity", 0).style("fill", "#a6d854");
-        svg.append("circle").attr("cx", 300).attr("cy", 150).attr("r", 6).attr("class", "label1").attr("opacity", 0).style("fill", "#ffd92f");
-        svg.append("text").attr("x", 320).attr("y", 0).text("0:00-4:00").attr("class", "label1").attr("opacity", 0).style("font-size", "15px").attr("alignment-baseline", "middle");
-        svg.append("text").attr("x", 320).attr("y", 30).text("4:00-8:00").attr("class", "label1").attr("opacity", 0).style("font-size", "15px").attr("alignment-baseline", "middle");
-        svg.append("text").attr("x", 320).attr("y", 60).text("8:00-12:00").attr("class", "label1").attr("opacity", 0).style("font-size", "15px").attr("alignment-baseline", "middle");
-        svg.append("text").attr("x", 320).attr("y", 90).text("12:00-16:00").attr("class", "label1").attr("opacity", 0).style("font-size", "15px").attr("alignment-baseline", "middle");
-        svg.append("text").attr("x", 320).attr("y", 120).text("16:00-20:00").attr("class", "label1").attr("opacity", 0).style("font-size", "15px").attr("alignment-baseline", "middle");
-        svg.append("text").attr("x", 320).attr("y", 150).text("20:00-0:00").attr("class", "label1").attr("opacity", 0).style("font-size", "15px").attr("alignment-baseline", "middle");
+    var data = require('./data.json');
+    
+    d3.selectAll("input")
+        .on("change", update);
 
-        svg.append("circle").attr("cx", 300).attr("cy", 0).attr("r", 6).attr("opacity", 0).attr("class", "label2").style("fill", "#66c2a5");
-        svg.append("circle").attr("cx", 300).attr("cy", 30).attr("r", 6).attr("opacity", 0).attr("class", "label2").style("fill", "#fc8d62");
-        svg.append("text").attr("x", 320).attr("y", 0).text("arrested").attr("opacity", 0).attr("class", "label2").style("font-size", "15px").attr("alignment-baseline", "middle");
-        svg.append("text").attr("x", 320).attr("y", 30).text("not arrested").attr("opacity", 0).attr("class", "label2").style("font-size", "15px").attr("alignment-baseline", "middle");
+    svg.append("circle").attr("cx", 300).attr("cy", 0).attr("r", 6).attr("class", "label1").attr("opacity", 0).style("fill", "#66c2a5");
+    svg.append("circle").attr("cx", 300).attr("cy", 30).attr("r", 6).attr("class", "label1").attr("opacity", 0).style("fill", "#fc8d62");
+    svg.append("circle").attr("cx", 300).attr("cy", 60).attr("r", 6).attr("class", "label1").attr("opacity", 0).style("fill", "#8da0cb");
+    svg.append("circle").attr("cx", 300).attr("cy", 90).attr("r", 6).attr("class", "label1").attr("opacity", 0).style("fill", "#e78ac3");
+    svg.append("circle").attr("cx", 300).attr("cy", 120).attr("r", 6).attr("class", "label1").attr("opacity", 0).style("fill", "#a6d854");
+    svg.append("circle").attr("cx", 300).attr("cy", 150).attr("r", 6).attr("class", "label1").attr("opacity", 0).style("fill", "#ffd92f");
+    svg.append("text").attr("x", 320).attr("y", 0).text("0:00-4:00").attr("class", "label1").attr("opacity", 0).style("font-size", "15px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 320).attr("y", 30).text("4:00-8:00").attr("class", "label1").attr("opacity", 0).style("font-size", "15px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 320).attr("y", 60).text("8:00-12:00").attr("class", "label1").attr("opacity", 0).style("font-size", "15px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 320).attr("y", 90).text("12:00-16:00").attr("class", "label1").attr("opacity", 0).style("font-size", "15px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 320).attr("y", 120).text("16:00-20:00").attr("class", "label1").attr("opacity", 0).style("font-size", "15px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 320).attr("y", 150).text("20:00-0:00").attr("class", "label1").attr("opacity", 0).style("font-size", "15px").attr("alignment-baseline", "middle");
 
-        const path = svg.selectAll("path")
-            .data(pie(data[val][year]));
+    svg.append("circle").attr("cx", 300).attr("cy", 0).attr("r", 6).attr("opacity", 0).attr("class", "label2").style("fill", "#66c2a5");
+    svg.append("circle").attr("cx", 300).attr("cy", 30).attr("r", 6).attr("opacity", 0).attr("class", "label2").style("fill", "#fc8d62");
+    svg.append("text").attr("x", 320).attr("y", 0).text("arrested").attr("opacity", 0).attr("class", "label2").style("font-size", "15px").attr("alignment-baseline", "middle");
+    svg.append("text").attr("x", 320).attr("y", 30).text("not arrested").attr("opacity", 0).attr("class", "label2").style("font-size", "15px").attr("alignment-baseline", "middle");
 
-        // Update existing arcs
-        path.transition().duration(200).attrTween("d", arcTween);
- 
+    const path = svg.selectAll("path")
+        .data(pie(data[val][year]));
 
-        var tip2 = d3.tip().attr('class', 'd3-tip2').offset([0, 0])
-            .html(function(d,i) {
-                var content = "<span style='margin-left: 2.5px;'><b>" + Math.round(data[val][year][i].count * 100) + "%" + "</b></span><br>";   
-                return content;
-            });
+    // Update existing arcs
+    path.transition().duration(200).attrTween("d", arcTween);
 
-        svg.call(tip2);
 
-        // Enter new arcs
-        path.enter().append("path")
-            .attr("fill", (d, i) => color(i))
-            .attr("d", arc)
-            .attr("stroke", "white")
-            .attr("stroke-width", "6px")
-            .on("mouseover", function(d,i) {
-                tip2.show;
-                d3.select(this).transition().duration('50').attr('opacity', '0.6');
-            })
-            .on("mouseout", function(d,i) {
-                tip2.hide;
-                d3.select(this).transition().duration('50').attr('opacity', '1');
-            })  
-            .each(function(d) { this._current = d; });
+    var tip2 = d3.tip().attr('class', 'd3-tip2').offset([0, 0])
+        .html(function(d,i) {
+            var content = "<span style='margin-left: 2.5px;'><b>" + Math.round(data[val][year][i].count * 100) + "%" + "</b></span><br>";   
+            return content;
+        });
 
-        var app = document.getElementsByClassName("label1");
-        var app2 = document.getElementsByClassName("label2");
-        if (val == "time_percentage") {
-            for (var i = 0; i < app2.length; i++) {
-                app2[i].style.opacity = 0;
-            }
-            for (var k = 0; k < app.length; k++) {
-                app[k].style.opacity = 1;
-            }
-        } else {
-            for (var l = 0; l < app.length; l++) {
-                app[l].style.opacity = 0;
-            }
-            for (var j = 0; j < app2.length; j++) {
-                app2[j].style.opacity = 1;
-            }
+    svg.call(tip2);
 
+    // Enter new arcs
+    path.enter().append("path")
+        .attr("fill", (d, i) => color(i))
+        .attr("d", arc)
+        .attr("stroke", "white")
+        .attr("stroke-width", "6px")
+        .on("mouseover", function(d,i) {
+            tip2.show;
+            d3.select(this).transition().duration('50').attr('opacity', '0.6');
+        })
+        .on("mouseout", function(d,i) {
+            tip2.hide;
+            d3.select(this).transition().duration('50').attr('opacity', '1');
+        })  
+        .each(function(d) { this._current = d; });
+
+    var app = document.getElementsByClassName("label1");
+    var app2 = document.getElementsByClassName("label2");
+    if (val == "time_percentage") {
+        for (var i = 0; i < app2.length; i++) {
+            app2[i].style.opacity = 0;
         }
-    }).catch(function(error) {console.log(error)});
+        for (var k = 0; k < app.length; k++) {
+            app[k].style.opacity = 1;
+        }
+    } else {
+        for (var l = 0; l < app.length; l++) {
+            app[l].style.opacity = 0;
+        }
+        for (var j = 0; j < app2.length; j++) {
+            app2[j].style.opacity = 1;
+        }
+
+    }
 }
+
 
 document.getElementById("button").onclick = function() {goBack()};
 
@@ -149,9 +151,9 @@ function goBack() {
     svg.call(tip);
 
     // get the data
-    d3.csv('./crime_number.csv', type).then(data => {
-    // var csvFile = require('./crime_number.csv');
-    // d3.csv(csvFile).then(function(data) {
+    // d3.csv('./crime_number.csv', type).then(data => {
+    var csvFile = require('./crime_number.csv');
+    d3.csv(csvFile).then(function(data) {
         // format the data
         data.forEach(function(d) {
             d.number = +d.number;
