@@ -65,6 +65,12 @@ function update(val = this.value) {
     var note = document.getElementById("note");
     note.style.display = "block";
 
+    var ex1 = document.getElementById("explain1");
+    ex1.style.display = "none";
+
+    var ex2 = document.getElementById("explain2");
+    ex2.style.display = "block";
+
     svg.attr("transform", `translate(${300}, ${height - 120})`);
 
     svg.append("circle").attr("cx", 0).attr("cy", 0).attr("r", 1).attr("id", "center").attr("opacity", 0).style("fill", "#66c2a5");
@@ -169,6 +175,12 @@ function goBack() {
 
     var note = document.getElementById("note");
     note.style.display = "none";
+
+    var ex1 = document.getElementById("explain1");
+    ex1.style.display = "block";
+
+    var ex2 = document.getElementById("explain2");
+    ex2.style.display = "none";
 
     svg.selectAll("*").remove();
     svg.attr("transform",

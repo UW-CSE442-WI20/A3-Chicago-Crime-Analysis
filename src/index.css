@@ -66,7 +66,12 @@ svg {
 	font-weight: bold;
 }
 
-#explain{
+#explain1{
+	font-family: STFangsong;
+	font-size: 20px;
+}
+
+#explain2{
 	font-family: STFangsong;
 	font-size: 20px;
 }
