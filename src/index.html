@@ -5,10 +5,16 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <h1 style="font-family: 'STFangsong'; text-align: center">Chicago Homicide Cases Analysis from 2010-2019</h1>
+
+<div>
+    <p id="note" style="position: absolute; margin-top: 550px; margin-left: 290px; font-size: 16px; display: none; color: dimgray">
+        *Percentage of each type may add up to be not equal to 100% due to rounding.</p>
+</div>
+
 <body>
 	<div id="control" style="display: none">
 	    <form>
-	    	<div class="button_cont" align="center" id="button" type="button">Back to All Cases</div>
+	    	<div class="button_cont" align="center" id="button" type="button">Back to All Years</div>
 	        <label class="select"><input type="radio" name="dataset" value="time_percentage" id = "r" checked> Time Period Percentage</label>
 	        <label class="select"><input type="radio" name="dataset" value="arrested_percentage"> Arrested Percentage</label>
 	    </form>
@@ -20,8 +26,7 @@
 <script src="index.js"></script>
 
 <div>
-    <p style="position: absolute; margin-top: -400px; margin-left: 830px; max-width: 120px; background-color: navajowhite; padding: 8px; border-radius: 10px">
-        Hover and click on your interested year to get more details!</p>
+    <p style="position: absolute; margin-top: -450px; margin-left: 830px; max-width: 200px; background-color: navajowhite; padding: 10px; border-radius: 10px" id="explain">
+        Hover over bars of years you are interetsed in to see how many homicide cases happened in that year. <br> <br>Click on bars of interested years to get more details about homicide cases in that year.</p>
 </div>
-
 </body>

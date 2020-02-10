@@ -35,13 +35,14 @@ svg {
 	border: none;
 	transition: all 0.4s ease 0s;
 	font-family: STFangsong;
-	font-style: bold;
+	font-weight: bold;
 }
 
 #button:hover {
 	background: #434343;
 	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
 	transition: all 0.4s ease 0s;
+	font-weight: bold;
 }
 
 .select {
@@ -54,5 +55,18 @@ svg {
 	display: inline-block;
 	border: none;
 	font-family: STFangsong;
-	font-style: bold;
+	font-weight: bold;
+	transition: all 0.4s ease 0s;
+}
+
+.select:hover {
+	background: #434343;
+	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+	transition: all 0.4s ease 0s;
+	font-weight: bold;
+}
+
+#explain{
+	font-family: STFangsong;
+	font-size: 20px;
 }

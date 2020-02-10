@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-var margin = {top: 50, right: 50, bottom: 30, left: 80},
+var margin = {top: 75, right: 50, bottom: 30, left: 80},
     width = 800 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -56,10 +56,16 @@ function arcTween(a) {
 }
 
 function update(val = this.value) {
+
+    svg.selectAll("text").remove();
+
     var butt = document.getElementById("control");
     butt.style.display = "block";
 
-    svg.attr("transform", `translate(${300}, ${height - 150})`);
+    var note = document.getElementById("note");
+    note.style.display = "block";
+
+    svg.attr("transform", `translate(${300}, ${height - 120})`);
 
     svg.append("circle").attr("cx", 0).attr("cy", 0).attr("r", 1).attr("id", "center").attr("opacity", 0).style("fill", "#66c2a5");
 
@@ -95,12 +101,26 @@ function update(val = this.value) {
 
     var tip2 = d3.tip().attr('class', 'd3-tip2').offset([0,0])
         .html(function(d,i) {
-        	console.log(d);
             var content = "<span style='margin-left: 2.5px;'><b>" + Math.round(d.data.count * 100) + "%" + "</b></span><br>";   
             return content;
         });
 
     svg.call(tip2);
+
+    var str = "When did homicide cases happen in ";
+
+    if (val == "arrested_percentage") {
+        str = "How many percent of homicide commiters were arrested "
+    }
+
+    svg.append("text")
+        .attr("x", 20)             
+        .attr("y", -230)
+        .attr("text-anchor", "middle")  
+        .style("font-size", "20px") 
+        .style("font-family", "STFangsong")
+        .style("font-weight", "bold")
+        .text(str + year + " ?*");
 
     // Enter new arcs
     path.enter().append("path")
@@ -146,11 +166,24 @@ function goBack() {
     butt.style.display = "none";
     var r = document.getElementById("r");
     r.checked = true;
+
+    var note = document.getElementById("note");
+    note.style.display = "none";
+
     svg.selectAll("*").remove();
     svg.attr("transform",
         "translate(" + margin.left + "," + margin.top + ")");
 
     svg.call(tip);
+
+    svg.append("text")
+        .attr("x", 350)             
+        .attr("y", -30)
+        .attr("text-anchor", "middle")  
+        .style("font-size", "22px") 
+        .style("font-family", "STFangsong")
+        .style("font-weight", "bold")
+        .text("Number of Homicide Cases over Years");
 
     // get the data
     // d3.csv('./crime_number.csv', type).then(data => {
@@ -163,7 +196,7 @@ function goBack() {
 
         // Scale the range of the data in the domains
         x.domain(data.map(function(d) { return d.year; }));
-        y.domain([0, d3.max(data, function(d) { return d.number; })]);
+        y.domain([0, 800]);
 
         // append the rectangles for the bar chart
         svg.selectAll(".bar")
@@ -193,19 +226,22 @@ function goBack() {
         // add the x Axis
         svg.append("g")
             .attr("transform", "translate(0," + height + ")")
-            .call(d3.axisBottom(x));
+            .call(d3.axisBottom(x))
+            .style("font-size", "12px");
+
         // add the y Axis
         svg.append("g")
-            .call(d3.axisLeft(y));
+            .call(d3.axisLeft(y))
+            .style("font-size", "12px");
 
         svg.append("text")
             .attr("x", 300)
-            .attr("y", 460)
+            .attr("y", 435)
             .text("Year");
 
         svg.append("text")
             .attr("x", -250)
-            .attr("y", -60)
+            .attr("y", -50)
             .attr("transform", "rotate(-90)")
             .text("Total Cases");
 
