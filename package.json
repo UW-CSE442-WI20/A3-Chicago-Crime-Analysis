@@ -11,5 +11,8 @@
   "author": "",
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "load-json-file": "^6.2.0"
   }
 }
