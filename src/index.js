@@ -40,7 +40,7 @@ const pie = d3.pie()
     .sort(null);
 
 const arc = d3.arc()
-    .innerRadius(0)
+    .innerRadius(100)
     .outerRadius(radius);
 
 function type(d) {
@@ -61,6 +61,7 @@ function update(val = this.value) {
 
     svg.attr("transform", `translate(${300}, ${height - 150})`);
 
+    svg.append("circle").attr("cx", 0).attr("cy", 0).attr("r", 1).attr("id", "center").attr("opacity", 0).style("fill", "#66c2a5");
 
     var data = require('./data.json');
     
@@ -92,7 +93,7 @@ function update(val = this.value) {
     path.transition().duration(200).attrTween("d", arcTween);
 
 
-    var tip2 = d3.tip().attr('class', 'd3-tip2').offset([0, 0])
+    var tip2 = d3.tip().attr('class', 'd3-tip2').offset([0,0])
         .html(function(d,i) {
             var content = "<span style='margin-left: 2.5px;'><b>" + Math.round(data[val][year][i].count * 100) + "%" + "</b></span><br>";   
             return content;
@@ -107,11 +108,11 @@ function update(val = this.value) {
         .attr("stroke", "white")
         .attr("stroke-width", "6px")
         .on("mouseover", function(d,i) {
-            tip2.show;
+            tip2.show(d,i,document.getElementById("center"));
             d3.select(this).transition().duration('50').attr('opacity', '0.6');
         })
         .on("mouseout", function(d,i) {
-            tip2.hide;
+            tip2.hide(d,i);
             d3.select(this).transition().duration('50').attr('opacity', '1');
         })  
         .each(function(d) { this._current = d; });
